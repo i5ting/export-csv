@@ -1,0 +1,23 @@
+{
+  "name": "import-csv",
+  "version": "1.0.1",
+  "description": "simple way for import csv",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm publish .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/i5ting/import-csv.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/i5ting/import-csv/issues"
+  },
+  "homepage": "https://github.com/i5ting/import-csv#readme",
+  "dependencies": {
+    "fast-csv": "^0.6.0"
+  }
+}
