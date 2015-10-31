@@ -1,6 +1,6 @@
 {
   "name": "export-csv",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "simple way for export csv",
   "main": "index.js",
   "scripts": {

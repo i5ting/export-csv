@@ -27,6 +27,24 @@ var data = [
 export_csv(data, 'test1.csv')
 ```
 
+过滤item，重写数据
+
+```
+var export_csv = require('.')
+
+var data = [
+  { a: 1, b: 2 },
+  { a: 2, b: 2 },
+  { a: 3, b: 2 }
+]
+export_csv(data, 'test3.csv', function (item) {
+  for (var key in item) {
+    item[key] = 'yy +' + item[key];
+  }
+  return item;
+})
+```
+
 指定回调函数
 
 ```
@@ -37,9 +55,11 @@ var data = [
   {a:2,b:2},
   {a:3,b:2}
 ]
-export_csv(data, 'test2.csv',function(){
+export_csv(data, 'test2.csv', function (item) {
+  return item;
+}, function () {
   console.log('end...');
-} )
+})
 ```
 
 指定回调函数，并生成header
@@ -52,9 +72,11 @@ var data = [
   {a:2,b:2},
   {a:3,b:2}
 ]
-export_csv(data, 'test2.csv',function(){
+export_csv(data, 'test2.csv', function (item) {
+  return item;
+}, function () {
   console.log('end...');
-} ,true)
+}, true)
 ```
 
 
